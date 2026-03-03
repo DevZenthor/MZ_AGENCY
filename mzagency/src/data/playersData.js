@@ -114,7 +114,7 @@ const players = [
     flag: FR,
     pr: "4,135 PR",
     ranking: "2647",
-    team: "Everse Esport",
+    team: "F/A",
     image: zuki,
     twitter: "https://x.com/VZuki_1",
     tracker: "https://fortnitetracker.com/profile/all/%C7%83ikuz/events"
