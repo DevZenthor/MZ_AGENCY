@@ -350,3 +350,142 @@ img {
   transform: scale(1.1);
   filter: drop-shadow(0 0 25px #7c24da);
 }
+/* ================= PROFILE PAGE ================= */
+
+.profile-page {
+  min-height: 100vh;
+  padding: 140px 60px;
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
+  color: white;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* IMAGE */
+.profile-image img {
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(124, 36, 218, 0.4);
+  transition: 0.4s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.03);
+}
+
+/* CONTENT */
+.profile-content {
+  max-width: 500px;
+}
+
+.profile-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px #7c24da;
+}
+
+.profile-role {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #c084fc;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* INFO GRID */
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-box {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(124, 36, 218, 0.3);
+  transition: 0.3s ease;
+}
+
+.info-box:hover {
+  border: 1px solid #7c24da;
+  box-shadow: 0 0 15px rgba(124, 36, 218, 0.4);
+}
+
+.info-box span {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info-box p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+.profile-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-buttons a {
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #7c24da, #c084fc);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.profile-buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #7c24da;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nationality {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.flag-img {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(124, 36, 218, 0.4);
+}
+
+/* Bloque la sélection de texte sur tout le site */
+body {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE */
+}
