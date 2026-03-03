@@ -4,8 +4,8 @@ import marcok from "../assets/marcok.jpg"
 function Management() {
 
   const managers = [
-    { name: "Zenthor", img: zenthor, twitter: "https://x.com/" },
-    { name: "Marcok", img: marcok, twitter: "https://x.com/" },
+    { name: "Zenthor", img: zenthor, twitter: "https://x.com/zenthor1480" },
+    { name: "Marcok", img: marcok, twitter: "https://x.com/marcokttv" },
   ]
 
   return (
