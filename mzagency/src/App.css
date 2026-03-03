@@ -7,30 +7,32 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+  padding-top: 80px; /* Compense navbar fixe */
+}
+
 img {
   display: block;
   max-width: 100%;
 }
 
 /* ========================= */
-/* BODY */
-/* ========================= */
-body {
-  background: #000;
-  font-family: Arial, sans-serif;
-  color: white;
-  overflow-x: hidden;
-}
-
-/* ========================= */
-/* NAVBAR NEON */
+/* NAVBAR */
 /* ========================= */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   height: 80px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -38,6 +40,7 @@ body {
   overflow: hidden;
 }
 
+/* Ligne néon animée */
 .navbar::after {
   content: "";
   position: absolute;
@@ -67,23 +70,11 @@ body {
   margin: auto;
   padding: 0 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* liens gauche, logo droite */
   align-items: center;
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.nav-logo img {
-  width: 38px;
-  filter: drop-shadow(0 0 10px #7c24da);
-}
-
+/* LINKS À GAUCHE */
 .nav-links {
   list-style: none;
   display: flex;
@@ -94,38 +85,36 @@ body {
   text-decoration: none;
   color: white;
   font-weight: 500;
-  position: relative;
   transition: 0.3s ease;
 }
 
 .nav-links li a:hover {
   color: #c084fc;
-  text-shadow: 0 0 8px #7c24da, 0 0 15px #7c24da;
+  text-shadow: 0 0 10px #7c24da;
 }
 
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0%;
-  height: 2px;
-  background: #7c24da;
-  box-shadow: 0 0 10px #7c24da;
+/* LOGO À DROITE */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 38px;
+  filter: drop-shadow(0 0 10px #7c24da);
   transition: 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
+.nav-logo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px #7c24da);
 }
 
 /* ========================= */
 /* HERO */
 /* ========================= */
 .hero {
-  min-height: 100vh;
-  padding-top: 120px;
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,12 +144,11 @@ body {
 .hero p {
   font-size: 20px;
   color: #aaa;
-  margin-bottom: 20px;
 }
 
 .hashtag {
-  font-size: 22px;
-  font-weight: bold;
+  margin-top: 15px;
+  font-size: 20px;
   color: #7c24da;
   text-shadow: 0 0 15px #7c24da;
 }
@@ -168,15 +156,13 @@ body {
 /* ========================= */
 /* SECTIONS */
 /* ========================= */
-.talent-section,
-.contact-section {
+.talent-section {
   padding: 120px 60px;
-  background: #000;
 }
 
 .section-title {
   text-align: center;
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 60px;
   color: #7c24da;
   text-shadow: 0 0 20px #7c24da;
@@ -193,7 +179,7 @@ body {
 }
 
 /* ========================= */
-/* CARTE NEON */
+/* CARDS */
 /* ========================= */
 .talent-card {
   position: relative;
@@ -252,9 +238,8 @@ body {
 }
 
 .card-content h3 {
-  margin-bottom: 8px;
   font-size: 16px;
-  color: white;
+  margin-bottom: 8px;
 }
 
 .status {
@@ -269,85 +254,10 @@ body {
 }
 
 /* ========================= */
-/* CONTACT - MEME STYLE QUE CARDS */
+/* RESPONSIVE */
 /* ========================= */
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
-}
-
-.contact-card {
-  position: relative;
-  width: 220px; /* même taille que talent */
-  padding: 3px;
-  border-radius: 20px;
-  text-decoration: none;
-  overflow: hidden;
-  transition: 0.3s ease;
-  color: white;
-}
-
-/* Bordure néon identique */
-.contact-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  background: conic-gradient(
-    from 0deg,
-    #7c24da,
-    #c084fc,
-    #7c24da,
-    #c084fc,
-    #7c24da
-  );
-  animation: rotateBorder 4s linear infinite;
-  z-index: 0;
-}
-
-.contact-card-content {
-  position: relative;
-  z-index: 1;
-  background: #111;
-  border-radius: 17px;
-  padding: 30px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.contact-icon {
-  font-size: 28px;
-  margin-bottom: 12px;
-  color: #c084fc;
-}
-
-.contact-card span {
-  font-size: 14px;
-}
-
-.contact-card:hover {
-  transform: translateY(-8px);
-}
-
-/* Désactive la sélection de texte */
-body {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none;     /* IE */
-  user-select: none;
-}
-
-/* ========================= */
-/* RESPONSIVE MOBILE */
-/* ========================= */
-
 @media (max-width: 768px) {
 
-  /* Navbar */
   .nav-container {
     padding: 0 20px;
   }
@@ -357,13 +267,13 @@ body {
     font-size: 14px;
   }
 
-  .nav-logo span {
-    display: none; /* cache texte pour gagner de la place */
+  .talent-card {
+    width: 160px;
   }
 
-  /* Hero */
-  .hero {
-    padding-top: 100px;
+  .card-content img {
+    width: 80px;
+    height: 80px;
   }
 
   .hero-logo {
@@ -375,43 +285,68 @@ body {
     padding: 0 20px;
   }
 
-  .hero p {
-    font-size: 16px;
-    padding: 0 20px;
-  }
-
   .section-title {
     font-size: 28px;
   }
+}
+/* ========================= */
+/* FOOTER PREMIUM */
+/* ========================= */
 
-  /* Cards */
-  .talent-grid {
-    gap: 30px;
-  }
+.footer {
+  position: relative;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
 
-  .talent-card {
-    width: 160px;
-  }
+/* Ligne néon animée en haut */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c24da,
+    #c084fc,
+    #7c24da,
+    transparent
+  );
+  animation: neonSlide 4s linear infinite;
+}
 
-  .card-content {
-    padding: 20px 10px;
-  }
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
 
-  .card-content img {
-    width: 80px;
-    height: 80px;
-  }
+.footer-text {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
 
-  .card-content h3 {
-    font-size: 14px;
-  }
+.footer-by {
+  color: #7c24da;
+  font-size: 14px;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #7c24da;
+}
 
-  .status {
-    font-size: 12px;
-  }
+.footer-logo {
+  width: 70px;
+  margin: auto;
+  filter: drop-shadow(0 0 15px #7c24da);
+  transition: 0.3s ease;
+}
 
-  /* Contact */
-  .contact-section {
-    padding: 80px 20px;
-  }
+.footer-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 25px #7c24da);
 }
