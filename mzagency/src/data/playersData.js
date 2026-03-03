@@ -140,7 +140,7 @@ const players = [
     flag: FR,
     pr: "—",
     ranking: "",
-    team: "F/A",
+    team: "Kataktis eSport",
     image: baki,
     twitter: "https://x.com/Coach_baki",
     tracker: "#"
