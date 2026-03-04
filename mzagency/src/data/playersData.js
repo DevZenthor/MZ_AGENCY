@@ -2,7 +2,6 @@ import hydranix from "../assets/hydranix.jpg"
 import oeht from "../assets/oeht.jpg"
 import lix from "../assets/lix.jpg"
 import eyozz from "../assets/eyozz.jpg"
-import raphou from "../assets/raphou.jpg"
 import dreyqan from "../assets/dreyqan.jpg"
 import novax from "../assets/novax.jpg"
 import zuki from "../assets/zuki.jpg"
@@ -66,19 +65,6 @@ const players = [
     image: eyozz,
     twitter: "https://x.com/EyozzFn",
     tracker: "https://fortnitetracker.com/profile/all/ATZ%20FRESHLPEUFRA/events"
-  },
-  {
-    slug: "raphou",
-    name: "Raphou",
-    role: "Player",
-    nationality: "France",
-    flag: FR,
-    pr: "168 PR",
-    ranking: "31704",
-    team: "Egy Future",
-    image: raphou,
-    twitter: "https://x.com/RPafout",
-    tracker: "https://fortnitetracker.com/profile/all/EGY%20Raphou/events"
   },
   {
     slug: "dreyqan",
