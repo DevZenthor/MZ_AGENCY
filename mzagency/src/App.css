@@ -16,7 +16,7 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   overflow-x: hidden;
-  padding-top: 80px; /* Compense navbar fixe */
+  padding-top: 80px; 
 }
 
 img {
@@ -40,7 +40,7 @@ img {
   overflow: hidden;
 }
 
-/* Ligne néon animée */
+
 .navbar::after {
   content: "";
   position: absolute;
@@ -70,11 +70,11 @@ img {
   margin: auto;
   padding: 0 60px;
   display: flex;
-  justify-content: space-between; /* liens gauche, logo droite */
+  justify-content: space-between; 
   align-items: center;
 }
 
-/* LINKS À GAUCHE */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -93,7 +93,6 @@ img {
   text-shadow: 0 0 10px #7c24da;
 }
 
-/* LOGO À DROITE */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -290,7 +289,7 @@ img {
   }
 }
 /* ========================= */
-/* FOOTER PREMIUM */
+/* FOOTER */
 /* ========================= */
 
 .footer {
@@ -302,7 +301,6 @@ img {
   overflow: hidden;
 }
 
-/* Ligne néon animée en haut */
 .footer::before {
   content: "";
   position: absolute;
@@ -350,7 +348,9 @@ img {
   transform: scale(1.1);
   filter: drop-shadow(0 0 25px #7c24da);
 }
-/* ================= PROFILE PAGE ================= */
+/* ========================= */
+/* PROFILE PAGE */
+/* ========================= */
 
 .profile-page {
   min-height: 100vh;
@@ -369,7 +369,7 @@ img {
   flex-wrap: wrap;
 }
 
-/* IMAGE */
+
 .profile-image img {
   width: 380px;
   border-radius: 20px;
@@ -381,7 +381,6 @@ img {
   transform: scale(1.03);
 }
 
-/* CONTENT */
 .profile-content {
   max-width: 500px;
 }
@@ -400,7 +399,6 @@ img {
   letter-spacing: 1px;
 }
 
-/* INFO GRID */
 .profile-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -432,7 +430,7 @@ img {
   font-weight: bold;
 }
 
-/* BUTTONS */
+
 .profile-buttons {
   margin-top: 40px;
   display: flex;
@@ -455,7 +453,7 @@ img {
   box-shadow: 0 0 20px #7c24da;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
   .profile-container {
     flex-direction: column;
@@ -482,10 +480,10 @@ img {
   box-shadow: 0 0 8px rgba(124, 36, 218, 0.4);
 }
 
-/* Bloque la sélection de texte sur tout le site */
+
 body {
   user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE */
+  -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none; 
 }
