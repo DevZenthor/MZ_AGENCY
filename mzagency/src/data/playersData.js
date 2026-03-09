@@ -1,5 +1,5 @@
 import hydranix from "../assets/hydranix.jpg"
-import oeht from "../assets/oeht.jpg"
+import nattalle from "../assets/nattalle.jpg"
 import lix from "../assets/lix.jpg"
 import eyozz from "../assets/eyozz.jpg"
 import dreyqan from "../assets/dreyqan.jpg"
@@ -26,19 +26,6 @@ const players = [
     image: hydranix,
     twitter: "https://x.com/HYDRANIX_T",
     tracker: "https://fortnitetracker.com/profile/all/1P%20Hydranix/events"
-  },
-  {
-    slug: "oeht",
-    name: "Oeht",
-    role: "Player",
-    nationality: "France",
-    flag: FR,
-    pr: "11,941 PR",
-    ranking: "941",
-    team: "EOZ Esport",
-    image: oeht,
-    twitter: "https://x.com/Oehtftn",
-    tracker: "https://fortnitetracker.com/profile/all/EOZ%200eht%206/events"
   },
   {
     slug: "lix",
@@ -129,6 +116,19 @@ const players = [
     team: "Kataktis eSport",
     image: baki,
     twitter: "https://x.com/Coach_baki",
+    tracker: "#"
+  },
+    {
+    slug: "coach-nattalle",
+    name: "Coach Nattalle",
+    role: "Coach",
+    nationality: "France",
+    flag: FR,
+    pr: "—",
+    ranking: "",
+    team: "F/A",
+    image: nattalle,
+    twitter: "https://x.com/CoachNattalle",
     tracker: "#"
   }
 ]
