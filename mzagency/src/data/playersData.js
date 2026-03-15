@@ -6,12 +6,14 @@ import dreyqan from "../assets/dreyqan.jpg"
 import novax from "../assets/novax.jpg"
 import zuki from "../assets/zuki.jpg"
 import yushin from "../assets/yushin.jpg"
+import alon from "../assets/alon.jpg"
 
 
 /* ===== FLAGS ===== */
 import FR from "../assets/flags/FR.svg"
 import BE from "../assets/flags/BE.svg"
 import IL from "../assets/flags/IL.svg"
+import SU from "../assets/flags/SU.svg"
 
 const players = [
   {
@@ -35,7 +37,7 @@ const players = [
     flag: FR,
     pr: "2,358 PR",
     ranking: "4402",
-    team: "One Prodige",
+    team: "F/A",
     image: lix,
     twitter: "https://x.com/1plixx",
     tracker: "https://fortnitetracker.com/profile/all/1P%20LIXX/events"
@@ -91,6 +93,19 @@ const players = [
     image: zuki,
     twitter: "https://x.com/VZuki_1",
     tracker: "https://fortnitetracker.com/profile/all/%C7%83ikuz/events"
+  },
+  {
+    slug: "alon",
+    name: "Alon",
+    role: "Player",
+    nationality: "Suède",
+    flag: SU,
+    pr: "7,562 PR",
+    ranking: "1610 ",
+    team: "F/A",
+    image: alon,
+    twitter: "https://x.com/alonfv1",
+    tracker: "https://fortnitetracker.com/profile/all/alonGOTy/events"
   },
   {
     slug: "coach-yushin",
