@@ -6,7 +6,7 @@ import dreyqan from "../assets/dreyqan.jpg"
 import novax from "../assets/novax.jpg"
 import zuki from "../assets/zuki.jpg"
 import yushin from "../assets/yushin.jpg"
-import baki from "../assets/baki.jpg"
+
 
 /* ===== FLAGS ===== */
 import FR from "../assets/flags/FR.svg"
@@ -103,19 +103,6 @@ const players = [
     team: "F/A",
     image: yushin,
     twitter: "https://x.com/coachyushin",
-    tracker: "#"
-  },
-  {
-    slug: "coach-baki",
-    name: "Coach Baki",
-    role: "Coach",
-    nationality: "France",
-    flag: FR,
-    pr: "—",
-    ranking: "",
-    team: "Kataktis eSport",
-    image: baki,
-    twitter: "https://x.com/Coach_baki",
     tracker: "#"
   },
     {
