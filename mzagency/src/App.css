@@ -1247,3 +1247,194 @@ body::after {
   }
 
 }
+
+/* ========================================================= */
+/* 📱 MOBILE RESPONSIVE — GSM FIX FULL */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ===== GLOBAL ===== */
+
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* ===== NAVBAR ===== */
+
+  .navbar {
+    height: 70px;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .nav-logo span {
+    display: none; /* garde seulement le logo */
+  }
+
+  .nav-links {
+    gap: 18px;
+    font-size: 14px;
+  }
+
+  /* ===== HERO ===== */
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero-logo {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+
+  /* ===== STATS ===== */
+
+  .stats-section {
+    padding: 60px 0;
+  }
+
+  .stat-card {
+    padding: 24px 16px;
+  }
+
+  .stat-card h3 {
+    font-size: 30px;
+  }
+
+  /* ===== ABOUT ===== */
+
+  .about-section p {
+    font-size: 16px;
+  }
+
+  /* ===== TALENT / MANAGEMENT GRID ===== */
+
+  .talent-grid,
+  .management-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .talent-card,
+  .management-card {
+    width: 100%;
+  }
+
+  /* ===== TITRES ===== */
+
+  .page-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .group-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  /* ===== PROFILE PAGE ===== */
+
+  .profile-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .profile-image img {
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .profile-info h1 {
+    font-size: 34px;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .profile-links {
+    justify-content: center;
+  }
+
+  /* ===== CONTACT ===== */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* ===== FOOTER ===== */
+
+  .footer {
+    padding: 40px 16px;
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    width: 50px;
+  }
+
+}
+
+/* ========================================================= */
+/* 🔒 DISABLE TEXT SELECTION — FULL SITE */
+/* ========================================================= */
+
+html, body, * {
+  user-select: none;
+  -webkit-user-select: none;   /* Chrome / Safari */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE */
+}
+
+/* Curseur normal partout */
+
+body {
+  cursor: default;
+}
+
+/* Curseur pointer sur éléments cliquables */
+
+a,
+button,
+.talent-card,
+.management-card,
+.btn-primary,
+.btn-outline {
+  cursor: pointer;
+}
