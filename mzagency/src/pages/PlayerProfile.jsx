@@ -1,69 +1,84 @@
 import { useParams } from "react-router-dom"
 import players from "../data/playersData"
 
+import { FaXTwitter } from "react-icons/fa6"
+import { HiOutlineExternalLink } from "react-icons/hi"
+
 function PlayerProfile() {
+
   const { slug } = useParams()
   const player = players.find(p => p.slug === slug)
 
-  if (!player) return <h2 style={{ padding: "120px 40px" }}>Player not found</h2>
+  if (!player) return <h2 style={{ paddingTop: 120 }}>Player not found</h2>
 
   return (
     <section className="profile-page">
 
       <div className="profile-container">
 
+        {/* LEFT — IMAGE */}
         <div className="profile-image">
           <img src={player.image} alt={player.name} />
         </div>
 
-        <div className="profile-content">
+        {/* RIGHT — INFO */}
+        <div className="profile-info">
 
           <h1>{player.name}</h1>
-          <span className="profile-role">{player.role}</span>
+          <span className="role">{player.role}</span>
 
-          <div className="profile-info">
+          {/* STATS */}
+          <div className="profile-stats">
 
-            <div className="info-box">
+            <div className="stat-box">
               <span>Nationality</span>
-              <p className="nationality">
-                <img
-                  src={player.flag}
-                  alt={player.nationality}
-                  className="flag-img"
-                />
-                {player.nationality}
-              </p>
+   <strong className="flag-only">
+  <img src={player.flag} alt={player.nationality} />
+</strong>
             </div>
 
-            <div className="info-box">
+            <div className="stat-box">
               <span>Team</span>
-              <p>{player.team}</p>
+              <strong>{player.team}</strong>
             </div>
 
-            <div className="info-box">
+            <div className="stat-box">
               <span>Power Ranking</span>
-              <p>{player.pr}</p>
+              <strong>{player.pr}</strong>
             </div>
 
             {player.ranking && (
-              <div className="info-box">
+              <div className="stat-box">
                 <span>EU Ranking</span>
-                <p>#{player.ranking}</p>
+                <strong>#{player.ranking}</strong>
               </div>
             )}
 
           </div>
 
-          <div className="profile-buttons">
-            <a href={player.twitter} target="_blank" rel="noopener noreferrer">
-              Twitter
+          {/* SOCIALS */}
+          <div className="profile-links">
+
+            <a
+              href={player.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              <FaXTwitter /> Twitter
             </a>
 
             {player.tracker !== "#" && (
-              <a href={player.tracker} target="_blank" rel="noopener noreferrer">
-                Fortnite Tracker
+              <a
+                href={player.tracker}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
+                <HiOutlineExternalLink /> Tracker
               </a>
             )}
+
           </div>
 
         </div>

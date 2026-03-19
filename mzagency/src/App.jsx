@@ -5,37 +5,27 @@ import Footer from "./components/Footer"
 
 import Home from "./pages/Home"
 import Talent from "./pages/Talent"
-import PlayerProfile from "./pages/PlayerProfile"
 import Management from "./pages/Management"
 import Contact from "./pages/Contact"
+import PlayerProfile from "./pages/PlayerProfile"
 
 function App() {
   return (
     <>
-      {/* ================= NAVBAR ================= */}
       <Navbar />
 
-      {/* ================= MAIN CONTENT ================= */}
-      <main>
-        <Routes>
-          {/* Home */}
-          <Route path="/" element={<Home />} />
+      <Routes>
 
-          {/* Talent page */}
-          <Route path="/talent" element={<Talent />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/talent" element={<Talent />} />
+        <Route path="/management" element={<Management />} />
+        <Route path="/contact" element={<Contact />} />
 
-          {/* Dynamic profile page */}
-          <Route path="/talent/:slug" element={<PlayerProfile />} />
+        {/* 🔥 LA ROUTE MANQUANTE */}
+        <Route path="/player/:slug" element={<PlayerProfile />} />
 
-          {/* Management */}
-          <Route path="/management" element={<Management />} />
+      </Routes>
 
-          {/* Contact */}
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-
-      {/* ================= FOOTER ================= */}
       <Footer />
     </>
   )

@@ -4,26 +4,56 @@ import marcok from "../assets/marcok.jpg"
 function Management() {
 
   const managers = [
-    { name: "Zenthor", img: zenthor, twitter: "https://x.com/zenthor1480" },
-    { name: "Marcok", img: marcok, twitter: "https://x.com/marcokttv" },
+    {
+      name: "Zenthor",
+      role: "Co-Founder & Manager",
+      bio: "Co-founder of MZ Agency. Focused on scouting, talent development and long-term player careers.",
+      img: zenthor,
+      twitter: "https://x.com/zenthor1480"
+    },
+    {
+      name: "Marcok",
+      role: "Co-Founder & Manager",
+      bio: "Co-founder of MZ Agency. Responsible for player support, communication and competitive growth.",
+      img: marcok,
+      twitter: "https://x.com/marcokttv"
+    },
   ]
 
   return (
-    <section className="talent-section">
-      <h2 className="section-title">Managers</h2>
+    <main className="page-content">
 
-      <div className="talent-grid">
-        {managers.map((manager, index) => (
-          <a key={index} href={manager.twitter} target="_blank" rel="noopener noreferrer" className="talent-card">
-            <div className="card-content">
-              <img src={manager.img} alt={manager.name} />
-              <h3>{manager.name}</h3>
-              <span className="status">Manager</span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
+      <section className="management-section">
+
+        <h2 className="section-title">Management</h2>
+
+        <div className="management-grid">
+          {managers.map((m, i) => (
+            <a
+              key={i}
+              href={m.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="management-card"
+            >
+              <img src={m.img} alt={m.name} />
+
+              <h3>{m.name}</h3>
+
+              <span className="management-role">
+                {m.role}
+              </span>
+
+              <p className="management-bio">
+                {m.bio}
+              </p>
+            </a>
+          ))}
+        </div>
+
+      </section>
+
+    </main>
   )
 }
 

@@ -3,16 +3,15 @@ import nattalle from "../assets/nattalle.jpg"
 import lix from "../assets/lix.jpg"
 import eyozz from "../assets/eyozz.jpg"
 import dreyqan from "../assets/dreyqan.jpg"
-import novax from "../assets/novax.jpg"
 import zuki from "../assets/zuki.jpg"
 import yushin from "../assets/yushin.jpg"
 import alon from "../assets/alon.jpg"
+import ichixx from "../assets/ichixx.jpg"
 
 
 /* ===== FLAGS ===== */
 import FR from "../assets/flags/FR.svg"
 import BE from "../assets/flags/BE.svg"
-import IL from "../assets/flags/IL.svg"
 import SU from "../assets/flags/SU.svg"
 
 const players = [
@@ -28,6 +27,19 @@ const players = [
     image: hydranix,
     twitter: "https://x.com/HYDRANIX_T",
     tracker: "https://fortnitetracker.com/profile/all/1P%20Hydranix/events"
+  },
+   {
+    slug: "Ichixx",
+    name: "Ichixx",
+    role: "Player",
+    nationality: "France",
+    flag: FR,
+    pr: "3,009 PR",
+    ranking: "3566",
+    team: "Nebula",
+    image: ichixx,
+    twitter: "https://x.com/ichiixfn",
+    tracker: "https://fortnitetracker.com/profile/all/NBL%20303HD./events?id=3b7ac52d-5887-4a93-b8e8-075f0f4cd044"
   },
   {
     slug: "lix",
@@ -67,19 +79,6 @@ const players = [
     image: dreyqan,
     twitter: "https://x.com/dreyqan",
     tracker: "https://fortnitetracker.com/profile/all/dreyqan/events"
-  },
-  {
-    slug: "novax",
-    name: "Novax",
-    role: "Player",
-    nationality: "Israel",
-    flag: IL,
-    pr: "1,410 PR",
-    ranking: "6718",
-    team: "F/A",
-    image: novax,
-    twitter: "https://x.com/novax7q",
-    tracker: "https://fortnitetracker.com/profile/kbm/King%20Penguin%2067/events?region=EU"
   },
   {
     slug: "zuki",
