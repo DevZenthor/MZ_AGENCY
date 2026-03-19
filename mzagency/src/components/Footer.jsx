@@ -1,4 +1,5 @@
 import logo from "../assets/MZ.svg"
+import { Link } from "react-router-dom"
 
 function Footer() {
   return (
@@ -12,9 +13,9 @@ function Footer() {
 
         <p className="footer-credit">By Zenthor</p>
 
-        <a href="/legal" className="legal-link">
+        <Link to="/legal" className="legal-link">
           Legal Notice
-        </a>
+        </Link>
 
       </div>
 
